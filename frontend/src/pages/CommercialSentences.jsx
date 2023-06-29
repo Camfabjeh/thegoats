@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import BreadCrumb from "../components/BreadCrumb";
+import Vente1 from "../assets/Vente1.png";
 
 // roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
 // pour l'instant j'ai juste mis un .find histoire d'appeler la variable et que ça ne mette pas d'erreur au linter
 
 function CommercialSentences() {
+  const [randomSentence, setRandomSentence] = useState("");
+
   const phraseschoc = [
     "Nos téléphones d'occasion sont comme des stars du rock : ils ont déjà vécu une vie palpitante et ils sont prêts à vous offrir une expérience incroyable !",
     "Les téléphones d'occasion que nous proposons ont été soigneusement sélectionnés et chouchoutés, prêts à être adoptés par des propriétaires passionnés de technologie à prix cassé.",
@@ -19,6 +22,12 @@ function CommercialSentences() {
     "Nos téléphones d'occasion sont comme des diamants bruts : ils ont juste besoin d'un peu de polissage pour briller de nouveau. Et vous serez celui qui leur donne cette seconde chance.",
     "Les téléphones d'occasion sont comme des trésors de seconde main, prêts à être chéris. Avec eux, vous obtenez le meilleur rapport qualité-prix et une histoire à raconter à chaque fois que vous l'utilisez.",
   ];
+
+  const handleClickRandom = () => {
+    const random = Math.floor(Math.random() * phraseschoc.length);
+    setRandomSentence(phraseschoc[random]);
+  };
+
   return (
     <div className="absolute">
       <div className="flex items-center fixed top-0 left-0 right-0">
@@ -48,6 +57,7 @@ function CommercialSentences() {
             Redémarrer
           </button>
         </Link>
+        </div>
       </div>
     </div>
   );
