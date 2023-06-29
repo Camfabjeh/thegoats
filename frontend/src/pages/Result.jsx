@@ -16,7 +16,7 @@ function Result() {
       <BreadCrumb />
       <div className="flex-1">
         <div className="flex justify-around">
-          <Link to="/estimation">
+          <Link to="/nettoyage/estimation">
             <button
               type="button"
               className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
@@ -24,7 +24,7 @@ function Result() {
               Précédent
             </button>
           </Link>
-          <Link to="/phraseschoc">
+          <Link to="/nettoyage/estimation/bilan/phraseschoc">
             <button
               type="button"
               className="bg-yellow text-green font-semibold font-text py-2 px-4 rounded shadow"

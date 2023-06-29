@@ -28,7 +28,7 @@ function PhoneCharacteristics() {
               Précédent
             </button>
           </Link>
-          <Link to="/bilan">
+          <Link to="/nettoyage/estimation/bilan">
             <button
               type="button"
               className="bg-yellow text-green font-semibold font-text py-2 px-4 rounded shadow"
