@@ -26,7 +26,7 @@ function CommercialSentences() {
       {phraseschoc.find((element) => element[0])}
       <div className="flex-1">
         <div className="flex justify-around absolute bottom-100 left-100">
-          <Link to="/bilan">
+          <Link to="/nettoyage/estimation/bilan">
             <button
               type="button"
               className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
