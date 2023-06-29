@@ -78,12 +78,12 @@ function CommercialSentences() {
             Précédent
           </Link>
           <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center mr-10 mb-8">
-          <Link
-            to="/"
-            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
-          >
-            Redémarrer l'application
-          </Link>
+            <Link
+              to="/"
+              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
+            >
+              Redémarrer l'application
+            </Link>
           </div>
         </div>
       </div>
