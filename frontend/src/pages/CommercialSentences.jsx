@@ -69,22 +69,20 @@ function CommercialSentences() {
         </div>
       </div>
 
-      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 items-center">
-        <div className="mr-10 mb-10">
+      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center">
+        <div className="mr-10 mb-5">
           <Link
             to="/nettoyage/estimation/bilan"
-            className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
+            className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
           >
             Précédent
           </Link>
-          <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center mr-10 mb-8">
-            <Link
-              to="/"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
-            >
-              Redémarrer l'application
-            </Link>
-          </div>
+          <Link
+            to="/"
+            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+          >
+            Recommencer
+          </Link>
         </div>
       </div>
     </div>
