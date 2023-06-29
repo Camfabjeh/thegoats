@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
 
 import BreadCrumb from "../components/BreadCrumb";
+
 function PhoneCharacteristics() {
   return (
     <div>
@@ -11,7 +12,7 @@ function PhoneCharacteristics() {
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
           <div className="flex items-center justify-center h-40 rounded-l-xl">
             <h1 className="text-4xl text-[#FFFFFF]">
-            Caractéristiques du téléphone
+              Caractéristiques du téléphone
             </h1>
           </div>
         </div>
