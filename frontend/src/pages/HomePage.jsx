@@ -6,9 +6,7 @@ function HomePage() {
     <div>
       <div className="flex items-center bg-[#233D8D] fixed top- left-0 right-0">
         <div className="flex items-center">
-          <div className="h-40 w-40 bg-gray-500 mr-2">
-            <span>Mon carré gris</span>
-          </div>
+          <div className="h-40 w-40 bg-gray-500 mr-2" />
         </div>
         <div className="flex items-center justify-center">
           <h1 className="text-5xl text-white pl-40">
