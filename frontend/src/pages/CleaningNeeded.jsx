@@ -10,12 +10,19 @@ function CleaningNeeded() {
       <div className="text-center text-secondary font-text text-2xl">
         Cliquer sur les téléphones pour accéder au tuto
         <div className="object-center	object-position: center;" />
-        <img
-          src="https://media.discordapp.net/attachments/1081687214460780575/1123951706925965383/img_telephone_modif.jpg?width=586&height=586"
-          alt="telephone a nettoyer"
-          className="mx-auto"
-        />
+        <a
+          href="https://www.numerama.com/tech/639549-comment-effacer-les-donnees-de-son-smartphone-avant-de-le-revendre-ou-le-recycler.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://media.discordapp.net/attachments/1081687214460780575/1123951706925965383/img_telephone_modif.jpg?width=586&height=586"
+            alt="telephone a nettoyer"
+            className="mx-auto"
+          />
+        </a>
       </div>
+
       <div className="flex items-center fixed top-0 left-0 right-0">
         <div className="w-2/12 h-40 bg-gray-500" />
         <div className="w-10/12 h-40 bg-[#233D8D]">
