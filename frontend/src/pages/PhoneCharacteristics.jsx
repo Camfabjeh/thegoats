@@ -28,21 +28,17 @@ function PhoneCharacteristics() {
         </div>
       </div>
       <div className="flex h-40 fixed bottom-0 left-0 right-0 py-4 bg-gray-200 justify-center items-center">
-        <Link to="/nettoyage">
-          <button
-            type="button"
-            className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 pr-5 rounded shadow"
-          >
-            Précédent
-          </button>
+        <Link
+          to="/nettoyage"
+          className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 pr-5 rounded shadow"
+        >
+          Précédent
         </Link>
-        <Link to="/nettoyage/estimation/bilan">
-          <button
-            type="button"
-            className="bg-yellow text-green font-semibold font-text py-2 px-4 ml-5 rounded shadow"
-          >
-            Suivant
-          </button>
+        <Link
+          to="/nettoyage/estimation/bilan"
+          className="bg-yellow text-green font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+        >
+          Suivant
         </Link>
       </div>
     </div>
