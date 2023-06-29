@@ -6,7 +6,7 @@ import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
 
 function Result() {
   return (
-    <div>
+    <div className="flex flex-col h-screen justify-between">
       <div className="flex items-center top-0 left-0 right-0 ">
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
@@ -16,8 +16,12 @@ function Result() {
         </div>
       </div>
       <BreadCrumb />
-      <PhoneCalculator />
-      <div className="flex h-40 fixed bottom-0 left-0 right-0 py-4 bg-gray-200 justify-center items-center">
+      <div className="flex-grow flex items-center justify-center m-10">
+        <div className="p-6 text-center bg-[#23adda] rounded-lg shadow-lg">
+          <PhoneCalculator />
+        </div>
+      </div>
+      <div className="flex h-40 bottom-0 left-0 right-0 py-4 bg-gray-200 justify-center items-center">
         <Link
           to="/nettoyage/estimation"
           className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
