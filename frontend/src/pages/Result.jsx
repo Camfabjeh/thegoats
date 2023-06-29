@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import PhoneCalculator from "../components/PhoneCalculator";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
+
 function Result() {
   return (
     <div>
@@ -10,9 +11,7 @@ function Result() {
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
           <div className="flex items-center justify-center h-40 rounded-l-xl">
-            <h1 className="text-4xl text-[#FFFFFF]">
-            Bilan de l'estimation
-            </h1>
+            <h1 className="text-4xl text-[#FFFFFF]">Bilan de l'estimation</h1>
           </div>
         </div>
       </div>
