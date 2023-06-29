@@ -1,9 +1,42 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import map from "../assets/map.png";
 
-// création du fil d'ariane reprenant les titres des pages (à retrouver dans App.jsx)
+function Breadcrumbs() {
+  const location = useLocation();
+  let currentLink = "";
 
-function BreadCrumb() {
-  return <div>BreadCrumb</div>;
+  const crumbs = location.pathname
+    .split("/")
+    .filter((crumb) => crumb !== "")
+    .map((crumb) => {
+      currentLink = +`/${crumb}`;
+      return (
+        <div
+          className=" after:content-['>'] after:mx-2 last:after:hidden"
+          key={crumb}
+        >
+          <Link to={currentLink}>{crumb}</Link>
+        </div>
+      );
+    });
+
+  return (
+    <div className="flex flex-row mt-1">
+      <img src={map} alt="crumbs" className="w-6 h-6 ml-2" />
+      {location.pathname === "/" ? (
+        <div>Accueil</div>
+      ) : (
+        <>
+          <div className="mr-2">
+            <Link to="/">Accueil</Link>
+          </div>
+          <p className="mr-2">{">"}</p>
+          {crumbs}
+        </>
+      )}
+    </div>
+  );
 }
 
-export default BreadCrumb;
+export default Breadcrumbs;

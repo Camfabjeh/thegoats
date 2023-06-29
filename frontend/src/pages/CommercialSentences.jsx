@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import BreadCrumb from "../components/BreadCrumb";
-
-// roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
-// pour l'instant j'ai juste mis un .find histoire d'appeler la variable et que ça ne mette pas d'erreur au linter
+import Vente1 from "../assets/Vente1.png";
+import Vente2 from "../assets/Vente2.png";
 
 function CommercialSentences() {
+  const [randomSentence, setRandomSentence] = useState(
+    " Que dire... que dire ???"
+  );
+  const [picture, setPicture] = useState(Vente1);
+
   const phraseschoc = [
     "Nos téléphones d'occasion sont comme des stars du rock : ils ont déjà vécu une vie palpitante et ils sont prêts à vous offrir une expérience incroyable !",
     "Les téléphones d'occasion que nous proposons ont été soigneusement sélectionnés et chouchoutés, prêts à être adoptés par des propriétaires passionnés de technologie à prix cassé.",
@@ -19,16 +23,50 @@ function CommercialSentences() {
     "Nos téléphones d'occasion sont comme des diamants bruts : ils ont juste besoin d'un peu de polissage pour briller de nouveau. Et vous serez celui qui leur donne cette seconde chance.",
     "Les téléphones d'occasion sont comme des trésors de seconde main, prêts à être chéris. Avec eux, vous obtenez le meilleur rapport qualité-prix et une histoire à raconter à chaque fois que vous l'utilisez.",
   ];
+  const changePicture = () => {
+    if (picture === Vente1) {
+      setPicture(Vente2);
+    } else {
+      setPicture(Vente1);
+    }
+  };
+  const handleClickRandom = () => {
+    const random = Math.floor(Math.random() * phraseschoc.length);
+    setRandomSentence(phraseschoc[random]);
+    changePicture();
+  };
+
   return (
     <div className="absolute">
+      <div className="flex items-center fixed top-0 left-0 right-0">
+        <div className="w-2/12 h-40 bg-gray-500" />
+        <div className="w-10/12 h-40 bg-[#233D8D]">
+          <div className="flex items-center justify-center h-40 bg-[#233D8D]">
+            <h1 className="text-4xl text-[#FFFFFF]">La petite phrase + !</h1>
+          </div>
+        </div>
+      </div>
       <BreadCrumb />
-      {phraseschoc.find((element) => element[0])}
+      <div className="flex items-start flex-row-reverse mt-8 ml-20 mb-10">
+        <div className="w-80 h-4 pt-20">{randomSentence}</div>
+        <div className="ml-10 pt-20">
+          <img src={picture} alt="crumbs" className="w-40 h-40" />
+          <button
+            type="button"
+            onClick={() => handleClickRandom()}
+            className=" bg-gradient-to-r from-green to-darkblue h-10 w-40 rounded-2xl text-yellow font-semibold "
+          >
+            Generate
+          </button>
+        </div>
+      </div>
+
       <div className="flex-1">
         <div className="flex justify-around absolute bottom-100 left-100">
           <Link to="/nettoyage/estimation/bilan">
             <button
               type="button"
-              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
             >
               Précédent
             </button>
@@ -36,7 +74,7 @@ function CommercialSentences() {
           <Link to="/accueil">
             <button
               type="button"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
             >
               Redémarrer
             </button>
