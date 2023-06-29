@@ -7,7 +7,7 @@ function GeneratePhonePitch({ phone }) {
   switch (phone.phoneCondition) {
     case "DEEE":
       conditionStatement =
-        "Je suis un peu amoché, mais je peux encore servir, pour pièces";
+        "je suis un peu amoché, mais je peux encore servir, pour pièces";
       break;
     case "Réparable":
       conditionStatement = `j'ai pas mal souffert mais je suis encore ${phone.phoneCondition}`;
