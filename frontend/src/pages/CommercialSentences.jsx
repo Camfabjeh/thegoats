@@ -65,21 +65,17 @@ function CommercialSentences() {
 
       <div className="flex-1 ml-80">
         <div className="flex justify-around absolute bottom-100 left-100">
-          <Link to="/nettoyage/estimation/bilan">
-            <button
-              type="button"
-              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
-            >
-              Précédent
-            </button>
+          <Link
+            to="/nettoyage/estimation/bilan"
+            className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
+          >
+            Précédent
           </Link>
-          <Link to="/">
-            <button
-              type="button"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
-            >
-              Redémarrer
-            </button>
+          <Link
+            to="/"
+            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
+          >
+            Redémarrer
           </Link>
         </div>
       </div>
