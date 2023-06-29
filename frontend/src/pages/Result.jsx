@@ -1,6 +1,4 @@
 import React from "react";
-import HeaderStyle from "../components/HeaderStyle";
-import ButtonStyle from "../components/ButtonStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 // écran de téléphone sur lequel se rédige, en direct, le pitch de l'histoire de vie du téléphone, et son prix
@@ -12,9 +10,7 @@ function Result() {
   return (
     <div>
       Result
-      <HeaderStyle />
       <BreadCrumb />
-      <ButtonStyle />
     </div>
   );
 }

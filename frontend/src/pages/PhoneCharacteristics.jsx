@@ -1,13 +1,10 @@
 import React from "react";
-import HeaderStyle from "../components/HeaderStyle";
-import ButtonStyle from "../components/ButtonStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 function PhoneCharacteristics() {
   return (
     <div>
       PhoneCharacteristics
-      <HeaderStyle />
       <BreadCrumb />
       <iframe
         title="formulaire estimation telephone"
@@ -15,7 +12,6 @@ function PhoneCharacteristics() {
         width="640"
         height="3536"
       />
-      <ButtonStyle />
     </div>
   );
 }

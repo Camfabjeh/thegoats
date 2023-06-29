@@ -1,6 +1,4 @@
 import React from "react";
-import HeaderStyle from "../components/HeaderStyle";
-import ButtonStyle from "../components/ButtonStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 // roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
@@ -22,10 +20,8 @@ function CommercialSentences() {
   return (
     <div>
       CommercialSentences
-      <HeaderStyle />
       <BreadCrumb />
       {phraseschoc.find((element) => element[0])}
-      <ButtonStyle />
     </div>
   );
 }
