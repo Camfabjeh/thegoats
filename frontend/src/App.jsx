@@ -11,11 +11,17 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/accueil" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/nettoyage" element={<CleaningNeeded />} />
-        <Route path="/estimation" element={<PhoneCharacteristics />} />
-        <Route path="/bilan" element={<Result />} />
-        <Route path="/phraseschoc" element={<CommercialSentences />} />
+        <Route
+          path="/nettoyage/estimation"
+          element={<PhoneCharacteristics />}
+        />
+        <Route path="/nettoyage/estimation/bilan" element={<Result />} />
+        <Route
+          path="/nettoyage/estimation/bilan/phraseschoc"
+          element={<CommercialSentences />}
+        />
         <Route path="*" element={<Nowhere />} />
       </Routes>
     </Router>
