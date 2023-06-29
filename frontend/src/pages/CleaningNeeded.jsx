@@ -7,6 +7,15 @@ import BreadCrumb from "../components/BreadCrumb";
 function CleaningNeeded() {
   return (
     <div>
+      <div className="text-center text-secondary font-text text-2xl">
+        Cliquer sur les téléphones pour accéder au tuto
+        <div className="object-center	object-position: center;" />
+        <img
+          src="https://media.discordapp.net/attachments/1081687214460780575/1123951706925965383/img_telephone_modif.jpg?width=586&height=586"
+          alt="telephone a nettoyer"
+          className="mx-auto"
+        />
+      </div>
       <div className="flex items-center fixed top-0 left-0 right-0">
         <div className="w-2/12 h-40 bg-gray-500" />
         <div className="w-10/12 h-40 bg-[#233D8D]">
