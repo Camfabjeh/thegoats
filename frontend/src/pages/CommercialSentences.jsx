@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import Vente1 from "../assets/Vente1.png";
 
-// roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
-// pour l'instant j'ai juste mis un .find histoire d'appeler la variable et que ça ne mette pas d'erreur au linter
-
 function CommercialSentences() {
   const [randomSentence, setRandomSentence] = useState("");
 
@@ -39,24 +36,38 @@ function CommercialSentences() {
         </div>
       </div>
       <BreadCrumb />
-      {phraseschoc.find((element) => element[0])}
-      <div className="flex h-40 fixed bottom-0 left-0 right-0 py-4 bg-gray-200 justify-center items-center">
-        <Link to="/nettoyage/estimation/bilan">
+      <div className="flex items-start flex-row-reverse mt-8 ml-20 mb-10">
+        <div className="w-80 h-40">{randomSentence}</div>
+        <div className="ml-10 pt-20">
+          <img src={Vente1} alt="crumbs" className="w-40 h-40" />
           <button
             type="button"
-            className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+            onClick={handleClickRandom}
+            className=" bg-purple mb-15"
           >
-            Précédent
+            Generate
           </button>
-        </Link>
-        <Link to="/accueil">
-          <button
-            type="button"
-            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
-          >
-            Redémarrer
-          </button>
-        </Link>
+        </div>
+      </div>
+
+      <div className="flex-1">
+        <div className="flex justify-around absolute bottom-100 left-100">
+          <Link to="/nettoyage/estimation/bilan">
+            <button
+              type="button"
+              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+            >
+              Précédent
+            </button>
+          </Link>
+          <Link to="/accueil">
+            <button
+              type="button"
+              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+            >
+              Redémarrer
+            </button>
+          </Link>
         </div>
       </div>
     </div>
