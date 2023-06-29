@@ -37,7 +37,7 @@ function CommercialSentences() {
   };
 
   return (
-    <div className="absolute">
+    <div>
       <div className="flex items-center fixed top-0 left-0 right-0">
         <div className="w-2/12 h-40 bg-gray-500" />
         <div className="w-10/12 h-40 bg-[#233D8D]">
@@ -47,21 +47,23 @@ function CommercialSentences() {
         </div>
       </div>
       <BreadCrumb />
-      <div className="flex items-start flex-row-reverse mt-8 ml-20 mb-10">
-        <div className="w-80 h-4 pt-20">{randomSentence}</div>
-        <div className="ml-10 pt-20">
+      <div className="flex items-start flex-row-reverse justify-center mt-40 mb-10">
+        <div className="w-80 h-4 pt-20 pl-10 font-text font-semibold">
+          {randomSentence}
+        </div>
+        <div className="ml-10 pt-40">
           <img src={picture} alt="crumbs" className="w-40 h-40" />
           <button
             type="button"
             onClick={() => handleClickRandom()}
-            className=" bg-gradient-to-r from-green to-darkblue h-10 w-40 rounded-2xl text-yellow font-semibold "
+            className=" bg-gradient-to-r from-green to-darkblue h-10 w-40 rounded-2xl text-yellow font-semibold font-text"
           >
-            Generate
+            Cliquer ici
           </button>
         </div>
       </div>
 
-      <div className="flex-1">
+      <div className="flex-1 ml-80">
         <div className="flex justify-around absolute bottom-100 left-100">
           <Link to="/nettoyage/estimation/bilan">
             <button
