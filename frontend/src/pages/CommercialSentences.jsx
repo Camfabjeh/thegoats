@@ -46,9 +46,7 @@ function CommercialSentences() {
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
           <div className="flex items-center justify-center h-40 rounded-l-xl">
-            <h1 className="text-4xl text-[#FFFFFF]">
-            La petite phrase + !
-            </h1>
+            <h1 className="text-4xl text-[#FFFFFF]">La petite phrase + !</h1>
           </div>
         </div>
       </div>
