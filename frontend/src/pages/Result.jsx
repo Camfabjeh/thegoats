@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import PhoneCalculator from "../components/PhoneCalculator";
+import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
 
 function Result() {
   return (
     <div>
-      <div className="flex items-center fixed top-0 left-0 right-0">
-        <div className="w-2/12 h-40 bg-gray-500" />
-        <div className="w-10/12 h-40 bg-[#233D8D]">
-          <div className="flex items-center justify-center h-40 bg-[#233D8D]">
+      <div className="flex items-center top-0 left-0 right-0 ">
+        <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
+        <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
+          <div className="flex items-center justify-center h-40 rounded-l-xl">
             <h1 className="text-4xl text-[#FFFFFF]">Bilan de l'estimation</h1>
           </div>
         </div>

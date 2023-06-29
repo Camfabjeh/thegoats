@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
 
 import BreadCrumb from "../components/BreadCrumb";
 
 function PhoneCharacteristics() {
   return (
-    <div style={{ overflowY: "scroll", maxHeight: "100vh" }}>
-      <div className="flex items-center fixed top-0 left-0 right-0">
-        <div className="w-2/12 h-40 bg-gray-500" />
-        <div className="w-10/12 h-40 bg-[#233D8D]">
-          <div className="flex items-center justify-center h-40 bg-[#233D8D]">
+    <div>
+      <div className="flex items-center top-0 left-0 right-0 ">
+        <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
+        <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
+          <div className="flex items-center justify-center h-40 rounded-l-xl">
             <h1 className="text-4xl text-[#FFFFFF]">
               Caractéristiques du téléphone
             </h1>
@@ -17,7 +18,7 @@ function PhoneCharacteristics() {
         </div>
       </div>
       <BreadCrumb />
-      <div className="flex-1 pt-40 pb-50">
+      <div className="flex-1 pt-10 pb-50">
         <div className="flex justify-around">
           <iframe
             title="formulaire estimation telephone"
