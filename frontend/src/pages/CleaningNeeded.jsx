@@ -10,7 +10,8 @@ function CleaningNeeded() {
       <div className="text-center text-secondary font-text text-2xl">
         Cliquer sur les téléphones pour accéder au tuto
         <div className="object-center	object-position: center;" />
-        <a href="https://www.numerama.com/tech/639549-comment-effacer-les-donnees-de-son-smartphone-avant-de-le-revendre-ou-le-recycler.html" 
+        <a 
+          href="https://www.numerama.com/tech/639549-comment-effacer-les-donnees-de-son-smartphone-avant-de-le-revendre-ou-le-recycler.html" 
           target="_blank" rel="noopener noreferrer"
         >
           <img
