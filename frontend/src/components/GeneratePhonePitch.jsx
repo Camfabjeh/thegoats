@@ -7,18 +7,18 @@ function GeneratePhonePitch({ phone }) {
   switch (phone.phoneCondition) {
     case "DEEE":
       conditionStatement =
-        "je suis un peu amoché, mais je peux encore servir, pour pièces";
+        "Je suis un peu amoché, mais je peux encore servir, pour pièces";
       break;
-    case "Réparable":
+    case "réparable":
       conditionStatement = `j'ai pas mal souffert mais je suis encore ${phone.phoneCondition}`;
       break;
-    case "Bloqué":
+    case "bloqué":
       conditionStatement = `je suis actuellement ${phone.phoneCondition}, mais je peux encore servir !`;
       break;
-    case "Reconditionnable":
+    case "reconditionnable":
       conditionStatement = `je suis tout à fait ${phone.phoneCondition}`;
       break;
-    case "Reconditionné":
+    case "reconditionné":
       conditionStatement = `j'ai été soigneusement ${phone.phoneCondition} par l'équipe d'Emmaüs Connect`;
       break;
     default:
@@ -35,7 +35,7 @@ function GeneratePhonePitch({ phone }) {
   switch (phone.screenCondition) {
     case "écran fêlé":
       screenConditionStatement =
-        "j'ai un peu morflé dans ma vie, donc je cherche un foyer accueillant où couler des jours heureux jusqu'à mon trépas";
+        "j'ai un peu morflé dans ma vie, donc je cherche un foyer accueillant pour y couler des jours heureux jusqu'à mon trépas";
       break;
     default:
       screenConditionStatement =
