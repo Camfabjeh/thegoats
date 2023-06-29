@@ -71,7 +71,7 @@ function CommercialSentences() {
               Précédent
             </button>
           </Link>
-          <Link to="/accueil">
+          <Link to="/">
             <button
               type="button"
               className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
