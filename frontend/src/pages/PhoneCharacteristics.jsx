@@ -11,18 +11,18 @@ function PhoneCharacteristics() {
         <div className="w-10/12 h-40 bg-[#233D8D]">
           <div className="flex items-center justify-center h-40 bg-[#233D8D]">
             <h1 className="text-4xl text-[#FFFFFF]">
-              Caractéristique du téléphone
+              Caractéristiques du téléphone
             </h1>
           </div>
         </div>
       </div>
       <BreadCrumb />
-      <div className="flex-1 pt-40">
+      <div className="flex-1 pt-40 pb-50">
         <div className="flex justify-around">
           <iframe
             title="formulaire estimation telephone"
             src="https://docs.google.com/forms/d/e/1FAIpQLScDFI83PEa1ezMD53eGirIupp_PIMssmemocdFbhHkwIM7Rlw/viewform?embedded=true"
-            width="640"
+            width="700"
             height="3536"
           />
         </div>
