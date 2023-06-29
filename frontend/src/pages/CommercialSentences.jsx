@@ -46,13 +46,15 @@ function CommercialSentences() {
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
           <div className="flex items-center justify-center h-40 rounded-l-xl">
-            <h1 className="text-4xl text-[#FFFFFF]">La petite phrase + !</h1>
+            <h1 className="text-4xl text-[#FFFFFF]">
+              Le petit plus marketing !
+            </h1>
           </div>
         </div>
       </div>
       <BreadCrumb />
       <div className="flex items-start flex-row-reverse justify-center mt-18 mb-10">
-        <div className="w-80 h-4 pt-20 pl-10 font-text font-semibold">
+        <div className="w-80 h-4 pt-5 pb-60 pr-5 mt-2 pl-10 font-text font-semibold bg-yellow bg-opacity-40 bg-size rounded-xl">
           {randomSentence}
         </div>
         <div className="ml-10 pt-40">
@@ -67,20 +69,22 @@ function CommercialSentences() {
         </div>
       </div>
 
-      <div className="flex-1 ml-80">
-        <div className="flex justify-around absolute bottom-100 left-100">
+      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 items-center">
+        <div className="mr-10 mb-10">
           <Link
             to="/nettoyage/estimation/bilan"
             className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
           >
             Précédent
           </Link>
-          <Link
-            to="/"
-            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
-          >
-            Redémarrer
-          </Link>
+          <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center mr-10 mb-8">
+            <Link
+              to="/"
+              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
+            >
+              Redémarrer l'application
+            </Link>
+          </div>
         </div>
       </div>
     </div>
