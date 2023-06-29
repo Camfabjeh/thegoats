@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 
 import BreadCrumb from "../components/BreadCrumb";
 import Vente1 from "../assets/Vente1.png";
+import Vente2 from "../assets/Vente2.png";
 
 function CommercialSentences() {
-  const [randomSentence, setRandomSentence] = useState("");
+  const [randomSentence, setRandomSentence] = useState(
+    " Que dire... que dire ???"
+  );
+  const [picture, setPicture] = useState(Vente1);
 
   const phraseschoc = [
     "Nos téléphones d'occasion sont comme des stars du rock : ils ont déjà vécu une vie palpitante et ils sont prêts à vous offrir une expérience incroyable !",
@@ -19,10 +23,17 @@ function CommercialSentences() {
     "Nos téléphones d'occasion sont comme des diamants bruts : ils ont juste besoin d'un peu de polissage pour briller de nouveau. Et vous serez celui qui leur donne cette seconde chance.",
     "Les téléphones d'occasion sont comme des trésors de seconde main, prêts à être chéris. Avec eux, vous obtenez le meilleur rapport qualité-prix et une histoire à raconter à chaque fois que vous l'utilisez.",
   ];
-
+  const changePicture = () => {
+    if (picture === Vente1) {
+      setPicture(Vente2);
+    } else {
+      setPicture(Vente1);
+    }
+  };
   const handleClickRandom = () => {
     const random = Math.floor(Math.random() * phraseschoc.length);
     setRandomSentence(phraseschoc[random]);
+    changePicture();
   };
 
   return (
@@ -37,13 +48,13 @@ function CommercialSentences() {
       </div>
       <BreadCrumb />
       <div className="flex items-start flex-row-reverse mt-8 ml-20 mb-10">
-        <div className="w-80 h-40">{randomSentence}</div>
+        <div className="w-80 h-4 pt-20">{randomSentence}</div>
         <div className="ml-10 pt-20">
-          <img src={Vente1} alt="crumbs" className="w-40 h-40" />
+          <img src={picture} alt="crumbs" className="w-40 h-40" />
           <button
             type="button"
-            onClick={handleClickRandom}
-            className=" bg-purple mb-15"
+            onClick={() => handleClickRandom()}
+            className=" bg-gradient-to-r from-green to-darkblue h-10 w-40 rounded-2xl text-yellow font-semibold "
           >
             Generate
           </button>
@@ -55,7 +66,7 @@ function CommercialSentences() {
           <Link to="/nettoyage/estimation/bilan">
             <button
               type="button"
-              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
             >
               Précédent
             </button>
@@ -63,7 +74,7 @@ function CommercialSentences() {
           <Link to="/accueil">
             <button
               type="button"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
             >
               Redémarrer
             </button>
