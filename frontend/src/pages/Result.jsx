@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HeaderStyle from "../components/HeaderStyle";
-import ButtonStyle from "../components/ButtonStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 // écran de téléphone sur lequel se rédige, en direct, le pitch de l'histoire de vie du téléphone, et son prix
@@ -14,7 +14,26 @@ function Result() {
       Result
       <HeaderStyle />
       <BreadCrumb />
-      <ButtonStyle />
+      <div className="flex-1">
+        <div className="flex justify-around">
+          <Link to="/estimation">
+            <button
+              type="button"
+              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+            >
+              Précédent
+            </button>
+          </Link>
+          <Link to="/phraseschoc">
+            <button
+              type="button"
+              className="bg-yellow text-green font-semibold font-text py-2 px-4 rounded shadow"
+            >
+              Suivant
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
