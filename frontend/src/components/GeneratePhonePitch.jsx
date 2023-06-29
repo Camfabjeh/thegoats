@@ -52,7 +52,7 @@ function GeneratePhonePitch({ phone }) {
             .pauseFor(1000)
             .deleteAll()
             .typeString(
-              `J'ai ${phone.ram} de mémoire RAM, et ${phone.storage} de capacité de stockage. `
+              `J'ai ${phone.ram} de mémoire RAM, et ${phone.storage} de capacité de stockage.`
             )
             .pauseFor(1000)
             .deleteAll()
@@ -65,6 +65,10 @@ function GeneratePhonePitch({ phone }) {
             .pauseFor(1000)
             .deleteAll()
             .typeString(`${conditionStatement}`)
+            .pauseFor(1000)
+            .typeString(
+              `Hello, moi c'est ${phone.model}. J'ai ${phone.ram} de mémoire RAM, et ${phone.storage} de capacité de stockage. Mon écran mesure ${phone.screen}, je suis bien sûr connecté à la ${phone.network} et ${chargerStatement}. ${screenConditionStatement}. ${conditionStatement}`
+            )
             .start();
         }}
       />
