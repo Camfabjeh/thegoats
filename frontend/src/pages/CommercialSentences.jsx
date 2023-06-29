@@ -6,6 +6,7 @@ import Vente1 from "../assets/Vente1.png";
 import Vente2 from "../assets/Vente2.png";
 import Vente3 from "../assets/Vente3.png";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
+import backgroundImage from "../assets/background.png";
 
 function CommercialSentences() {
   const [randomSentence, setRandomSentence] = useState(
@@ -41,7 +42,10 @@ function CommercialSentences() {
   };
 
   return (
-    <div>
+    <div
+      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className="flex items-center top-0 left-0 right-0 ">
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">

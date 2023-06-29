@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
+import backgroundImage from "../assets/background.png";
 
 import BreadCrumb from "../components/BreadCrumb";
 
 function PhoneCharacteristics() {
   return (
-    <div>
+    <div
+      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className="flex items-center top-0 left-0 right-0 ">
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
