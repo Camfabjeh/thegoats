@@ -5,6 +5,8 @@ import PhoneCharacteristics from "./pages/PhoneCharacteristics";
 import Result from "./pages/Result";
 import CommercialSentences from "./pages/CommercialSentences";
 import Nowhere from "./pages/Nowhere";
+import PhoneCalculator from "./components/PhoneCalculator";
+
 import "./App.css";
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
           path="/nettoyage/estimation/bilan/phraseschoc"
           element={<CommercialSentences />}
         />
+        <Route path="/results" element={<PhoneCalculator />} />
         <Route path="*" element={<Nowhere />} />
       </Routes>
     </Router>
