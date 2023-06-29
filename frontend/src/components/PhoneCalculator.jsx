@@ -42,11 +42,11 @@ function PhoneCalculator() {
   const cost = calculatePhoneCost();
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       {phoneData && <GeneratePhonePitch phone={phoneData} />}
-      <p>
-        Le coût final pour le téléphone {phoneData.model} est {cost.toFixed(2)}{" "}
-        euros.
+      <p className="text-center">
+        Le coût final pour le téléphone {phoneData.model} est <br />
+        {cost.toFixed(2)} €
       </p>
     </div>
   );
