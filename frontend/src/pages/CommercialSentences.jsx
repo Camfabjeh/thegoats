@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import Vente1 from "../assets/Vente1.png";
 import Vente2 from "../assets/Vente2.png";
+import Vente3 from "../assets/Vente3.png";
+import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
 
 function CommercialSentences() {
   const [randomSentence, setRandomSentence] = useState(
@@ -26,8 +28,10 @@ function CommercialSentences() {
   const changePicture = () => {
     if (picture === Vente1) {
       setPicture(Vente2);
-    } else {
-      setPicture(Vente1);
+    } else if (picture === Vente2) {
+      setPicture(Vente3);
+    } else if (picture === Vente3) {
+      setPicture(Vente2);
     }
   };
   const handleClickRandom = () => {
@@ -38,16 +42,18 @@ function CommercialSentences() {
 
   return (
     <div>
-      <div className="flex items-center fixed top-0 left-0 right-0">
-        <div className="w-2/12 h-40 bg-gray-500" />
-        <div className="w-10/12 h-40 bg-[#233D8D]">
-          <div className="flex items-center justify-center h-40 bg-[#233D8D]">
-            <h1 className="text-4xl text-[#FFFFFF]">La petite phrase + !</h1>
+      <div className="flex items-center top-0 left-0 right-0 ">
+        <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
+        <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
+          <div className="flex items-center justify-center h-40 rounded-l-xl">
+            <h1 className="text-4xl text-[#FFFFFF]">
+            La petite phrase + !
+            </h1>
           </div>
         </div>
       </div>
       <BreadCrumb />
-      <div className="flex items-start flex-row-reverse justify-center mt-40 mb-10">
+      <div className="flex items-start flex-row-reverse justify-center mt-18 mb-10">
         <div className="w-80 h-4 pt-20 pl-10 font-text font-semibold">
           {randomSentence}
         </div>
