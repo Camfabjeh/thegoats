@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderStyle from "../components/HeaderStyle";
 
 // création de cards avec insertion images apple et android
 
 function HomePage() {
   return (
     <div>
-      <HeaderStyle />
       <div className="flex-1">
         <div className="flex justify-around">
           <Link to="/nettoyage">

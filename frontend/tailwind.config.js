@@ -14,7 +14,7 @@ module.exports = {
     },
     fontFamily: {
       text: ["Barlow", "sans-serif"],
-      title: ["Fira Sans", "sans-serif"]
+      title: ["Fira Sans", "sans-serif"],
     },
     extend: {},
   },

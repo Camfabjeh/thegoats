@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderStyle from "../components/HeaderStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 // écran de téléphone sur lequel se rédige, en direct, le pitch de l'histoire de vie du téléphone, et son prix
@@ -12,7 +11,6 @@ function Result() {
   return (
     <div>
       Result
-      <HeaderStyle />
       <BreadCrumb />
       <div className="flex-1">
         <div className="flex justify-around">

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderStyle from "../components/HeaderStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 // insertion du lien vers les tutos
@@ -8,7 +7,6 @@ import BreadCrumb from "../components/BreadCrumb";
 function CleaningNeeded() {
   return (
     <div>
-      <HeaderStyle />
       <BreadCrumb />
       <div className="flex-1">
         <div className="flex justify-around">
