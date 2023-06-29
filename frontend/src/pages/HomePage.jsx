@@ -21,13 +21,11 @@ function HomePage() {
       </div>
       <div className="flex h-40 fixed bottom-0 left-0 right-0 py-4 bg-gray-200 justify-center items-center">
         <div className="flex justify-around">
-          <Link to="/nettoyage">
-            <button
-              type="button"
-              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
-            >
-              Suivant
-            </button>
+          <Link
+            to="/nettoyage"
+            className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+          >
+            Suivant
           </Link>
         </div>
       </div>
