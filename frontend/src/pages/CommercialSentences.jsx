@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HeaderStyle from "../components/HeaderStyle";
-import ButtonStyle from "../components/ButtonStyle";
 import BreadCrumb from "../components/BreadCrumb";
 
 // roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
@@ -20,12 +20,30 @@ function CommercialSentences() {
     "Les téléphones d'occasion sont comme des trésors de seconde main, prêts à être chéris. Avec eux, vous obtenez le meilleur rapport qualité-prix et une histoire à raconter à chaque fois que vous l'utilisez.",
   ];
   return (
-    <div>
-      CommercialSentences
+    <div className="absolute">
       <HeaderStyle />
       <BreadCrumb />
       {phraseschoc.find((element) => element[0])}
-      <ButtonStyle />
+      <div className="flex-1">
+        <div className="flex justify-around absolute bottom-100 left-100">
+          <Link to="/bilan">
+            <button
+              type="button"
+              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+            >
+              Précédent
+            </button>
+          </Link>
+          <Link to="/accueil">
+            <button
+              type="button"
+              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow"
+            >
+              Redémarrer
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
