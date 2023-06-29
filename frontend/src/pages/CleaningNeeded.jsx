@@ -36,7 +36,7 @@ function CleaningNeeded() {
         </a>
       </div>
 
-      <div className="flex h-40  bottom-0 left-0 right-0 pb-8 bg-gray-200 justify-center items-center">
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-200 flex justify-between items-center h-16 px-8">
         <Link
           to="/"
           className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
@@ -45,7 +45,7 @@ function CleaningNeeded() {
         </Link>
         <Link
           to="/nettoyage/estimation"
-          className="bg-yellow text-green font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+          className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
         >
           Suivant
         </Link>
