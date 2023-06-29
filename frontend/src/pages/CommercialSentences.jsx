@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import Vente1 from "../assets/Vente1.png";
 
-// roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
-// pour l'instant j'ai juste mis un .find histoire d'appeler la variable et que ça ne mette pas d'erreur au linter
-
 function CommercialSentences() {
   const [randomSentence, setRandomSentence] = useState("");
 
@@ -30,6 +27,14 @@ function CommercialSentences() {
 
   return (
     <div className="absolute">
+      <div className="flex items-center fixed top-0 left-0 right-0">
+        <div className="w-2/12 h-40 bg-gray-500" />
+        <div className="w-10/12 h-40 bg-[#233D8D]">
+          <div className="flex items-center justify-center h-40 bg-[#233D8D]">
+            <h1 className="text-4xl text-[#FFFFFF]">La petite phrase + !</h1>
+          </div>
+        </div>
+      </div>
       <BreadCrumb />
       <div className="flex items-start flex-row-reverse mt-8 ml-20 mb-10">
         <div className="w-80 h-40">{randomSentence}</div>
@@ -37,7 +42,7 @@ function CommercialSentences() {
           <img src={Vente1} alt="crumbs" className="w-40 h-40" />
           <button
             type="button"
-            onClick={() => handleClickRandom()}
+            onClick={handleClickRandom}
             className=" bg-purple mb-15"
           >
             Generate
