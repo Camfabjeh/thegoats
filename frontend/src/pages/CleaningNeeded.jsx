@@ -4,8 +4,6 @@ import BreadCrumb from "../components/BreadCrumb";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
 import backgroundImage from "../assets/background.png";
 
-// insertion du lien vers les tutos
-
 function CleaningNeeded() {
   return (
     <div
@@ -23,7 +21,8 @@ function CleaningNeeded() {
         </div>
       </div>
       <div className="pl-40">
-      <BreadCrumb /> </div>
+        <BreadCrumb />{" "}
+      </div>
       <div className="text-center text-secondary font-text text-xl pt-20">
         Cliquer sur les téléphones pour accéder à un tutoriel simple, sinon
         appuyer sur Suivant pour passer à la suite
