@@ -2,12 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BreadCrumb from "../components/BreadCrumb";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
+import backgroundImage from "../assets/background.png";
 
 // insertion du lien vers les tutos
 
 function CleaningNeeded() {
   return (
-    <div>
+    <div
+      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className="flex items-center top-0 left-0 right-0 ">
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
@@ -19,7 +23,7 @@ function CleaningNeeded() {
         </div>
       </div>
       <BreadCrumb />
-      <div className="text-center text-secondary font-text text-xl pt-8">
+      <div className="text-center text-secondary font-text text-xl pt-20">
         Cliquer sur les téléphones pour accéder à un tutoriel simple, sinon
         appuyer sur Suivant pour passer à la suite
         <div />
@@ -36,19 +40,21 @@ function CleaningNeeded() {
         </a>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 bg-gray-200 flex justify-between items-center h-16 px-8">
-        <Link
-          to="/"
-          className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
-        >
-          Précédent
-        </Link>
-        <Link
-          to="/nettoyage/estimation"
-          className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
-        >
-          Suivant
-        </Link>
+      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center">
+        <div className="mr-10 mb-5">
+          <Link
+            to="/"
+            className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+          >
+            Précédent
+          </Link>
+          <Link
+            to="/nettoyage/estimation"
+            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+          >
+            Suivant
+          </Link>
+        </div>
       </div>
     </div>
   );

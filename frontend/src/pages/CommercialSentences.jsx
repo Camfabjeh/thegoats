@@ -6,6 +6,7 @@ import Vente1 from "../assets/Vente1.png";
 import Vente2 from "../assets/Vente2.png";
 import Vente3 from "../assets/Vente3.png";
 import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
+import backgroundImage from "../assets/background.png";
 
 function CommercialSentences() {
   const [randomSentence, setRandomSentence] = useState(
@@ -41,7 +42,10 @@ function CommercialSentences() {
   };
 
   return (
-    <div>
+    <div
+      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className="flex items-center top-0 left-0 right-0 ">
         <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
         <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
@@ -69,22 +73,20 @@ function CommercialSentences() {
         </div>
       </div>
 
-      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 items-center">
-        <div className="mr-10 mb-10">
+      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center">
+        <div className="mr-10 mb-5">
           <Link
             to="/nettoyage/estimation/bilan"
-            className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-10"
+            className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
           >
             Précédent
           </Link>
-          <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center mr-10 mb-8">
-            <Link
-              to="/"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow ml-80"
-            >
-              Redémarrer l'application
-            </Link>
-          </div>
+          <Link
+            to="/"
+            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+          >
+            Recommencer
+          </Link>
         </div>
       </div>
     </div>
