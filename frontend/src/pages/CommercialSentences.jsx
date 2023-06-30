@@ -56,7 +56,9 @@ function CommercialSentences() {
           </div>
         </div>
       </div>
-      <BreadCrumb />
+      <div className="pl-40">
+        <BreadCrumb />{" "}
+      </div>
       <div className="flex items-start flex-row-reverse justify-center mt-18 mb-10">
         <div className="w-80 h-4 pt-5 pb-60 pr-5 mt-2 pl-10 font-text font-semibold bg-yellow bg-opacity-40 bg-size rounded-xl">
           {randomSentence}

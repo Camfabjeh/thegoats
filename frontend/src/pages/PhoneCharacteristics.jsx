@@ -21,7 +21,9 @@ function PhoneCharacteristics() {
           </div>
         </div>
       </div>
-      <BreadCrumb />
+      <div className="pl-40">
+        <BreadCrumb />{" "}
+      </div>
       <div className="flex-1 pt-10 pb-50">
         <div className="flex justify-around">
           <iframe
