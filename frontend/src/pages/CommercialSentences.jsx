@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 
 import BreadCrumb from "../components/BreadCrumb";
 import Vente1 from "../assets/Vente1.png";
-
-// roue animée à tourner, comprenant par exemple 8 couleurs (reprendre couleurs charte) chacune correspondant à une phrase commerciale
-// pour l'instant j'ai juste mis un .find histoire d'appeler la variable et que ça ne mette pas d'erreur au linter
+import Vente2 from "../assets/Vente2.png";
+import Vente3 from "../assets/Vente3.png";
+import logo from "../assets/LOGO_ADOPTE_UN_TEL.png";
+import backgroundImage from "../assets/background.png";
 
 function CommercialSentences() {
-  const [randomSentence, setRandomSentence] = useState("");
+  const [randomSentence, setRandomSentence] = useState(
+    " Que dire... que dire ???"
+  );
+  const [picture, setPicture] = useState(Vente1);
 
   const phraseschoc = [
     "Nos téléphones d'occasion sont comme des stars du rock : ils ont déjà vécu une vie palpitante et ils sont prêts à vous offrir une expérience incroyable !",
@@ -22,46 +26,68 @@ function CommercialSentences() {
     "Nos téléphones d'occasion sont comme des diamants bruts : ils ont juste besoin d'un peu de polissage pour briller de nouveau. Et vous serez celui qui leur donne cette seconde chance.",
     "Les téléphones d'occasion sont comme des trésors de seconde main, prêts à être chéris. Avec eux, vous obtenez le meilleur rapport qualité-prix et une histoire à raconter à chaque fois que vous l'utilisez.",
   ];
-
+  const changePicture = () => {
+    if (picture === Vente1) {
+      setPicture(Vente2);
+    } else if (picture === Vente2) {
+      setPicture(Vente3);
+    } else if (picture === Vente3) {
+      setPicture(Vente2);
+    }
+  };
   const handleClickRandom = () => {
     const random = Math.floor(Math.random() * phraseschoc.length);
     setRandomSentence(phraseschoc[random]);
+    changePicture();
   };
 
   return (
-    <div className="absolute">
-      <BreadCrumb />
-      <div className="flex items-start flex-row-reverse mt-8 ml-20 mb-10">
-        <div className="w-80 h-40">{randomSentence}</div>
-        <div className="ml-10 pt-20">
-          <img src={Vente1} alt="crumbs" className="w-40 h-40" />
+    <div
+      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="flex items-center top-0 left-0 right-0 ">
+        <img src={logo} alt="Logo Adopte Un Tel" className="w-50 h-40 pl-2" />
+        <div className="w-11/12 bg-[#233D8D] rounded-l-xl">
+          <div className="flex items-center justify-center h-40 rounded-l-xl">
+            <h1 className="text-4xl text-[#FFFFFF]">
+              Le petit plus marketing !
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div className="pl-40">
+        <BreadCrumb />{" "}
+      </div>
+      <div className="flex items-start flex-row-reverse justify-center mt-18 mb-10">
+        <div className="w-80 h-4 pt-5 pb-60 pr-5 mt-2 pl-10 font-text font-semibold bg-yellow bg-opacity-40 bg-size rounded-xl">
+          {randomSentence}
+        </div>
+        <div className="ml-10 pt-40">
+          <img src={picture} alt="crumbs" className="w-40 h-40" />
           <button
             type="button"
             onClick={() => handleClickRandom()}
-            className=" bg-purple mb-15"
+            className="bg-gradient-to-r from-green to-darkblue h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
           >
-            Generate
+            Cliquer ici
           </button>
         </div>
       </div>
 
-      <div className="flex-1">
-        <div className="flex justify-around absolute bottom-100 left-100">
-          <Link to="/nettoyage/estimation/bilan">
-            <button
-              type="button"
-              className="bg-green text-yellow font-semibold font-text py-2 px-4 rounded shadow"
-            >
-              Précédent
-            </button>
+      <div className="flex fixed inset-x-0 bottom-0 py-4 bg-gray-200 justify-end items-center">
+        <div className="mr-10 mb-5">
+          <Link
+            to="/nettoyage/estimation/bilan"
+            className="bg-gradient-to-r from-darkblue to-green h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+          >
+            Précédent
           </Link>
-          <Link to="/accueil">
-            <button
-              type="button"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 rounded shadow"
-            >
-              Redémarrer
-            </button>
+          <Link
+            to="/"
+            className="bg-gradient-to-r from-green to-darkblue  h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+          >
+            Recommencer
           </Link>
         </div>
       </div>

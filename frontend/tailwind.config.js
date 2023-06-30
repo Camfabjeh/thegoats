@@ -11,6 +11,10 @@ module.exports = {
       yellow: "#FECC38",
       purple: "#E53750",
       black: "#272350",
+      blue: "#2A49A1",
+      otherblue: "#3157B0",
+      thirdblue: "#3765BD",
+      fourthblue: "#3E74CA",
     },
     fontFamily: {
       text: ["Barlow", "sans-serif"],
