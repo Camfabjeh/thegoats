@@ -67,6 +67,7 @@ function CommercialSentences() {
             type="button"
             onClick={() => handleClickRandom()}
             className=" bg-gradient-to-r from-green to-darkblue h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+
           >
             Cliquer ici
           </button>
