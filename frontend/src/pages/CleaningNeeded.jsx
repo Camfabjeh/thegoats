@@ -22,7 +22,8 @@ function CleaningNeeded() {
           </div>
         </div>
       </div>
-      <BreadCrumb />
+      <div className="pl-40">
+      <BreadCrumb /> </div>
       <div className="text-center text-secondary font-text text-xl pt-20">
         Cliquer sur les téléphones pour accéder à un tutoriel simple, sinon
         appuyer sur Suivant pour passer à la suite

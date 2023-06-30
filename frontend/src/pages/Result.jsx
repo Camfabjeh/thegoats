@@ -20,7 +20,8 @@ function Result() {
             </div>
           </div>
         </div>
-        <BreadCrumb />
+        <div className="pl-40">
+      <BreadCrumb /> </div>
         <div className="flex-grow flex items-center justify-center m-10">
           <div className="p-6 text-center bg-gradient-to-r from-green to-yellow font-text rounded-lg shadow-lg">
             <PhoneCalculator />
