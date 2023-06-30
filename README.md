@@ -1,53 +1,30 @@
-## Concept
+                                               ADOPTE UN TEL _ HACKATHON 2 @WILD CODE SCHOOL
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+Ce hackathon est en partenariat avec Emmaüs Connect.
+Emmaus Connect travaille au quotidien sur l'inclusion au numérique et vend donc des biens électroniques et notamment des smartphones d'occasion pour répondre à ce besoin.
 
-## Setup & Use
 
-### Windows users
+## Objectif
+L’objectif est de développer un outil de classification des smartphones afin de générer un prix de vente selon leurs caractéristiques (RAM, stockage, etc)
+Au delà de cette fonctionnalité principale, nous étions invités à faire preuve de créativité pour étoffer l'application (interface de connexion pour les membres d'Emmaüs Connect, import csv pour enrichir la BDD, FAQ destinée aux utilisateurs de l'appli, feature explorant les tendances hardwares/mobiles du futur, un espace d'échange entre les membres, etc).
 
-Be sure to run these commands in a git terminal to avoid [issues with newline formats](https://en.wikipedia.org/wiki/Newline#Issues_with_different_newline_formats):
+### Notre application 
 
-```
-git config --global core.eol lf
-git config --global core.autocrlf false
-```
+Nous voulions faciliter le travail des bénévoles pour qu'ils puissent se libérer du temps plus rapidement pour accompagner le public dans des démarches liées au numérique.
+Nous avons donc développé un outil de classification des smartphones. Nous voulions que les nouveaux bénévoles ou ceux qui viennent occasionnelement puissent etre autonomes sur l'action de nettoyer un smartphone.
+Nous leur avons créé un formulaire très intuitif et rapide à remplir pour estimer le tarif d'un téléphone selon un certain nombre de critères.
+Une fiche produit qui résume l'ensemble des caractéristiques et le prix de vente.
 
-### Project Initialization
+### Team
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- If you are using `yarn` or `pnpm`, adapt the `config/cli` in `package.json`
-- Run command `npm install`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
-
-### Available Commands
-
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
-
-## FAQ
-
-### Tools
-
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+- Camille Fabry
+- Laure Graves
+- Ugo Bourgoin
+- Quantin Massias
+- Adrien Turcek-Perron
 
 ### Deployment
 
-For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
+https://thegoats.remote-fr-3.wilders.dev/
 
-- CAPROVER_BACK_APPNAME : name app on caprover
-- CAPROVER_FRONT_APPNAME : name app on caprover
-- CAPROVER_PASSWORD : password caprover
-- CAPROVER_SERVER : link of domain
+
