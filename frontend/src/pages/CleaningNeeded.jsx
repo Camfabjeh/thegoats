@@ -44,13 +44,13 @@ function CleaningNeeded() {
         <div className="mr-10 mb-5">
           <Link
             to="/"
-            className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+            className="bg-gradient-to-r from-darkblue to-green h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
           >
             Précédent
           </Link>
           <Link
             to="/nettoyage/estimation"
-            className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+            className="bg-gradient-to-r from-green to-darkblue h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
           >
             Suivant
           </Link>
