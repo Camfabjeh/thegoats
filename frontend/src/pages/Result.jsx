@@ -22,7 +22,7 @@ function Result() {
         </div>
         <BreadCrumb />
         <div className="flex-grow flex items-center justify-center m-10">
-          <div className="p-6 text-center bg-[#23adda] rounded-lg shadow-lg">
+          <div className="p-6 text-center bg-gradient-to-r from-green to-yellow font-text rounded-lg shadow-lg">
             <PhoneCalculator />
           </div>
         </div>
@@ -30,13 +30,13 @@ function Result() {
           <div className="mr-10 mb-5">
             <Link
               to="/nettoyage/estimation/bilan"
-              className="bg-green text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
+              className="bg-gradient-to-r from-darkblue to-green h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
             >
               Précédent
             </Link>
             <Link
               to="/nettoyage/estimation/bilan/phraseschoc"
-              className="bg-darkblue text-yellow font-semibold font-text py-2 px-4 ml-5 rounded shadow"
+              className="bg-gradient-to-r from-green to-darkblue  h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
             >
               Suivant
             </Link>
