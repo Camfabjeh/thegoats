@@ -11,8 +11,7 @@ function Nowhere() {
       />
       <Link
         to="/"
-        className="bg-gradient-to-r from-darkblue to-green h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow"
-      >
+        className="bg-gradient-to-r from-darkblue to-green h-10 w-40 text-yellow font-semibold font-text py-2 px-4 mr-5 rounded shadow">
         Retour à l'accueil
       </Link>
     </div>
